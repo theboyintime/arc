@@ -1,0 +1,59 @@
+/* CSS style for header component*/
+
+.header{
+    position: fixed;
+    width: 100%;
+    padding: 50px 0;
+    z-index: 100;
+}
+
+.headerGroup{
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+    justify-items: center;
+}
+
+.header a{
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header button{
+    padding: 8px 20px;
+    font-size: 20px;
+    color: black;
+    background: #56ccf2;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.header button:hover{
+    background: white;
+    box-shadow: 0 10px 20px #56ccf2;
+    transform: translateY(-3px);
+    
+}
+
+/* if device viewport is less than 600px, use these rules */
+@media (max-width:600px){
+    .header{
+        padding: 15px 0;
+    }
+
+    .headerGroup{
+        grid-template-columns: repeat(4, auto);
+    }
+
+    /* hides the 3rd header item when display is less than 600px */
+    .header a:nth-child(3){
+        display: none;
+    }
+}
